@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #printable-po-document, #printable-po-document * {
+      visibility: visible;
+    }
+    #printable-po-document {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      margin: 0;
+      background: white !important;
+      color: black !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+}

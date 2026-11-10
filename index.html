@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>B2B Supply Tracker</title>
+    <meta name="description" content="B2B Supply Tracker - Enterprise supply chain tracking, purchase orders, POS thermal printing, AI OCR scanner, and vendor inventory management." />
+    
+    <!-- PWA Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <link rel="apple-touch-icon" href="/logo.jpg" />
+
+    <!-- Mobile Browser / PWA Capability Meta Tags -->
+    <meta name="theme-color" content="#0284c7" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="B2B Supply Tracker" />
+    <meta name="application-name" content="B2B Supply Tracker" />
+
+    <!-- Open Graph & Social -->
+    <meta property="og:title" content="B2B Supply Tracker - Manage. Track. Optimize." />
+    <meta property="og:description" content="B2B Supply Tracker - Enterprise supply tracking, purchase orders, digital signatures, POS thermal printing, and inventory control." />
+    <meta property="og:image" content="/logo.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body className="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register PWA Service Worker
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then((registration) => {
+              console.log('PWA ServiceWorker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+              console.warn('PWA ServiceWorker registration notice:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+
+

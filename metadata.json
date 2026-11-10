@@ -1,0 +1,6 @@
+{
+  "name": "B2B Supply Tracker",
+  "description": "Comprehensive B2B Supply Tracker and enterprise supply chain management system featuring purchase orders, inventory tracking, supplier management, POS thermal printing, multi-user staff permissions, and automated trade workflows.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

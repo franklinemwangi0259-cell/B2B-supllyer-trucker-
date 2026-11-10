@@ -1,0 +1,58 @@
+{
+  "name": "B2B Supply Tracker & ERP",
+  "short_name": "SupplyTracker",
+  "description": "Double-entry accounting, POS thermal printing, AI OCR scanner, and B2B vendor inventory management.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "POS Terminal",
+      "short_name": "POS",
+      "description": "Open POS Receipt Printing & Billing Terminal",
+      "url": "/?tab=pos",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Scan Bill (AI OCR)",
+      "short_name": "OCR",
+      "description": "Scan Invoice or Receipt with Gemini Vision",
+      "url": "/?tab=ocr",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Customer Khata",
+      "short_name": "Khata",
+      "description": "Customer Ledger & Debt Collections",
+      "url": "/?tab=khata",
+      "icons": [{ "src": "/icon.svg", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ]
+}
